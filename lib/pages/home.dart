@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_page_transition_animation/nav_transition/nav_no_animation.dart';
 import 'package:flutter_page_transition_animation/nav_transition/nav_slide_from_bottom.dart';
 import 'package:flutter_page_transition_animation/nav_transition/nav_slide_from_left.dart';
 import 'package:flutter_page_transition_animation/nav_transition/nav_slide_from_right.dart';
@@ -18,6 +19,12 @@ class HomePage extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: <Widget>[
+            RaisedButton(
+              onPressed: () {
+                Navigator.push(context, NavNoAnimation(page: OtherPage()));
+              },
+              child: Text("No Animation")
+            ),
             RaisedButton(
               onPressed: () {
                 Navigator.push(context, NavSlideFromBottom(page: OtherPage()));
