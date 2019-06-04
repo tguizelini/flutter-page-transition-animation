@@ -19,19 +19,27 @@ class HomePage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: <Widget>[
             RaisedButton(
-              onPressed: () => NavSlideFromBottom(page: OtherPage()),
+              onPressed: () {
+                Navigator.push(context, NavSlideFromBottom(page: OtherPage()));
+              },
               child: Text("From Bottom")
             ),
             RaisedButton(
-              onPressed: () => NavSlideFromTop(page: OtherPage()),
+              onPressed: () {
+                 Navigator.push(context, NavSlideFromTop(page: OtherPage()));
+              },
               child: Text("From Top")
             ),
             RaisedButton(
-              onPressed: () => NavSlideFromLeft(page: OtherPage()),
+              onPressed: () {
+                Navigator.push(context, NavSlideFromLeft(page: OtherPage()));
+              },
               child: Text("From Left")
             ),
             RaisedButton(
-              onPressed: () => NavSlideFromRight(page: OtherPage()),
+              onPressed: () {
+                Navigator.push(context, NavSlideFromRight(page: OtherPage()));
+              },
               child: Text("From Right")
             )
           ]

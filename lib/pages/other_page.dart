@@ -5,8 +5,11 @@ class OtherPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text("Other Page")),
-      body: Center(
-        child: Text("My Page")
+      body: Container(
+        color: Colors.grey,
+        child: Center(
+          child: Text("My Page")
+        ),
       ),
     );
   }
